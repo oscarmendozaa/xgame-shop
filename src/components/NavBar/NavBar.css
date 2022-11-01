@@ -1,0 +1,33 @@
+.menu-navbar-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 60px;
+}
+
+.menu-title{
+    margin-left: 20px;
+    color: beige;
+    font-size: 25px;
+    padding: auto;
+    margin-top: 11px;
+}
+
+.menu-items{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-right:auto;
+    margin-top: 20px;
+}
+
+.menu-list{
+    display: flex;
+    margin-left: 30px;
+    color: beige;
+}
+
+li a:hover {
+    background-color: rgb(58, 57, 57);
+    cursor: pointer;
+  }
