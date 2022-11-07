@@ -1,3 +1,13 @@
 .message{
-    color: white;
+    color: black;
+
+}
+
+.message-greeting-container{
+display: flex;
+justify-content: center;
+margin: 0 auto;
+margin-top: 100px;
+
+
 }
