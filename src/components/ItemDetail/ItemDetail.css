@@ -1,0 +1,27 @@
+.cardProductDetail{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1.5rem;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.colorTexto{
+    color: white;
+    margin-top: 30px;
+}
+
+.card-actions{
+    margin-top: 30px;
+}
+
+.card-body{
+    width: 100%;
+    align-items: center;
+}
+
+p{
+    color: black;
+}
