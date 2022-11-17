@@ -4,7 +4,43 @@ import CartWidget from '../CartWidget/CartWidget'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {outlet, Link, Outlet} from 'react-router-dom';
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import LogoX from '../LogoX/LogoX'
 
+
+const NavBar = () => {
+    return (
+    <>
+    <Navbar bg="light" variant="light" className='navBg' expand="lg">
+        <Container>
+          <LogoX/>
+          <Navbar.Brand as={Link} to="/">Xgame-shop</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/categoria/consolas/">Consolas</Nav.Link>
+            <Nav.Link as={Link} to="/categoria/juegos">Juegos</Nav.Link>
+            <Nav.Link as={Link} to="/categoria/MisPedidos">Mis pedidos</Nav.Link>
+          </Nav>
+        </Container>
+          <CartWidget/>
+      </Navbar>
+
+      <section>
+          <Outlet></Outlet>
+      </section>
+
+
+    </>
+    )
+  }
+  
+  export default NavBar
+
+
+
+
+
+//Nav bar fuera de bootstarp
 // const NavBar = () => {
 //   return (
 //     <div className = 'menu-navbar-container'>
@@ -28,23 +64,3 @@ import Navbar from 'react-bootstrap/Navbar';
 // }
 
 // export default NavBar
-
-const NavBar = () => {
-    return (
-    <>
-    <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Xgame-shop</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#productos">Productos</Nav.Link>
-            <Nav.Link href="#buscar">Buscar</Nav.Link>
-            <Nav.Link href="#mispedidos">Mis pedidos</Nav.Link>
-          </Nav>
-        </Container>
-        <CartWidget/>
-      </Navbar>
-    </>
-    )
-  }
-  
-  export default NavBar
