@@ -43,14 +43,14 @@ useEffect(()=>{
 
 
 
-  //  Swal.fire({
-  //    title: 'Bienvenido al portal',
-  //    text: 'Xgame-shop',
-  //    imageUrl: 'https://img.unocero.com/2020/12/colaboracion-xbox-playstation-nintendo-seguridad-1-1-1024x512.jpg',
-  //    imageWidth: 400,
-  //    imageHeight: 200,
-  //    imageAlt: 'Custom image',
-  //  })
+    Swal.fire({
+      title: 'Bienvenido al portal',
+      text: 'Xgame-shop',
+      imageUrl: 'https:img.unocero.com/2020/12/colaboracion-xbox-playstation-nintendo-seguridad-1-1-1024x512.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
 
  
 

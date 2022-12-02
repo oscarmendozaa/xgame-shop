@@ -1,13 +1,19 @@
-.message{
-    color: black;
-
+.cardProduct{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
-.message-greeting-container{
-display: flex;
-justify-content: center;
-margin: 0 auto;
-margin-top: 100px;
-
-
-}
+@media screen and (max-width: 1240px) {
+   
+    .cardProduct{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+};

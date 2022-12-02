@@ -25,3 +25,8 @@
 p{
     color: black;
 }
+
+.card-img-top{
+    width: 800px;
+    height: 200px;
+}

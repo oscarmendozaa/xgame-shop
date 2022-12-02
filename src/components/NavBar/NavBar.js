@@ -4,8 +4,7 @@ import CartWidget from '../CartWidget/CartWidget'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {outlet, Link, Outlet} from 'react-router-dom';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import {Link, Outlet} from 'react-router-dom';
 import LogoX from '../LogoX/LogoX'
 
 

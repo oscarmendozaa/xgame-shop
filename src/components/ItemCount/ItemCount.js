@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import './ItemCount.css'
 
 const ItemCount = () => {
 
@@ -17,12 +18,12 @@ const [contador, setContador] = useState(0);
 
   return (
     <div>
-      <p>
+      <p className='countStyles'>
         {contador}
       </p>
-      <div>
-      <button className='btn btn-primary' onClick={less}>Quitar</button>
-        <button className='btn btn-primary' onClick={add}>Agregar</button>
+      <div className='divCount'>
+        <button className='btn btn-primary' onClick={less}>Quitar</button>
+        <button className='btn btn-primary' onClick={add}>Agregar al carrito</button>
       </div>
     </div>
   )

@@ -1,0 +1,12 @@
+.divCount{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary{
+margin: 5px;
+}
+
+.countStyles{
+    text-align: center;
+}
