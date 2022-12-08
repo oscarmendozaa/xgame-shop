@@ -1,6 +1,7 @@
 .divCount{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .btn-primary{
@@ -9,4 +10,9 @@ margin: 5px;
 
 .countStyles{
     text-align: center;
+}
+
+.divAdd{
+    display: flex;
+    justify-content: center;
 }

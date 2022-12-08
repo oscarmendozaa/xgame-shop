@@ -1,23 +1,22 @@
 import './Item.css'
 import { Link } from "react-router-dom"
-import ItemList from "../ItemList/ItemList"
 import Card from 'react-bootstrap/Card';
 
-const Item = ({producto}) => {
+const Item = ({info}) => {
   return (
    <>
 
 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`/imagenes/productos/${producto.img}`} alt={producto.name}/>
+      <Card.Img variant="top" src={`/imagenes/productos/${info.img}`} alt={info.name}/>
       <Card.Body>
-        <Card.Title>{producto.name}</Card.Title>
+        <Card.Title>{info.name}</Card.Title>
         <Card.Text>
-          {producto.description}
+          {info.description}
         </Card.Text>
         <Card.Text>
-        Precio: ${producto.price}
+        Precio: ${info.price}
         </Card.Text>
-        <Link to={`/item/${producto.id}`}><button variant="primary" className="btn btn-primary justify-center">Comprar</button></Link>
+        <Link to={`/item/${info.id}`}><button variant="primary" className="btn btn-primary justify-center">Comprar</button></Link>
       </Card.Body>
     </Card>
 

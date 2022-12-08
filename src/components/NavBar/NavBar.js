@@ -18,10 +18,9 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/categoria/consolas/">Consolas</Nav.Link>
             <Nav.Link as={Link} to="/categoria/juegos">Juegos</Nav.Link>
-            <Nav.Link as={Link} to="/categoria/MisPedidos">Mis pedidos</Nav.Link>
           </Nav>
         </Container>
-          <CartWidget/>
+        <Nav.Link as={Link} to="/cart"><CartWidget/></Nav.Link>
       </Navbar>
 
       <section>

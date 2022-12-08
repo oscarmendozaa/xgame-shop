@@ -7,9 +7,6 @@ const [contador, setContador] = useState(0);
 
     const add = ()=>{
       setContador(contador + 1)
-      if(contador === 0){
-        return
-      }
     }
 
     const less = ()=>{
@@ -18,12 +15,15 @@ const [contador, setContador] = useState(0);
 
   return (
     <div>
-      <p className='countStyles'>
+      <div className='divCount'>
+        <button disabled={contador <= 1} className='btn btn-primary' onClick={less}>-</button>
+        <p className='countStyles'>
         {contador}
       </p>
-      <div className='divCount'>
-        <button className='btn btn-primary' onClick={less}>Quitar</button>
-        <button className='btn btn-primary' onClick={add}>Agregar al carrito</button>
+        <button className='btn btn-primary' onClick={add}>+</button>
+      </div>
+      <div className='divAdd'>
+          <button className='btn btn-primary' onClick={add}>Agregar al carrito</button>
       </div>
     </div>
   )
