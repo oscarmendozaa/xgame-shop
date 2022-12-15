@@ -5,7 +5,7 @@ import { useCartContext } from '../context/CartContext';
 
 
 const CartWidget = () => {
-   const {totalProducts} = useCartContext 
+   const {totalProducts} = useCartContext ()
    return (
      <div className='menu_navbar__logo'>
          <img className='menu-navbar__img' src={logo} alt="cart widget"/>
