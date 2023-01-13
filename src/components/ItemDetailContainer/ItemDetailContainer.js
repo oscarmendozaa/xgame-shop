@@ -21,14 +21,14 @@ const ItemDetailContainer = () => {
   // }, [id])
 
   const [data, setData] = useState({});
-  const { detalleId } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
       const querydb = getFirestore();
-      const queryDoc = doc(querydb, 'data', detalleId);
+      const queryDoc = doc(querydb, 'items', id);
       getDoc(queryDoc)
           .then(res => setData({ id: res.id, ...res.data() }))
-  }, [detalleId]);
+  }, [id]);
 
   return (
     // <>

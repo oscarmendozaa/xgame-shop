@@ -1,9 +1,8 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './ItemCount.css'
 
-const ItemCount = () => {
-
-const [contador, setContador] = useState(0);
+const ItemCount = ({initial, stock, onAdd}) => {
+const [contador, setContador] = useState(parseInt(initial));
 
     const add = ()=>{
       setContador(contador + 1)
@@ -13,6 +12,10 @@ const [contador, setContador] = useState(0);
       setContador(contador - 1)
     }
 
+    useEffect(() => {
+      setContador(parseInt(initial));
+  }, [initial])
+
   return (
     <div>
       <div className='divCount'>
@@ -20,10 +23,10 @@ const [contador, setContador] = useState(0);
         <p className='countStyles'>
         {contador}
       </p>
-        <button className='btn btn-primary' onClick={add}>+</button>
+        <button disabled={contador >= stock} className='btn btn-primary' onClick={add}>+</button>
       </div>
       <div className='divAdd'>
-          <button className='btn btn-primary' onClick={add}>Agregar al carrito</button>
+          <button disabled={stock <=0} className='btn btn-primary' onClick={()=> onAdd(contador)}>Agregar al carrito</button>
       </div>
     </div>
   )

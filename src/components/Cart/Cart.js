@@ -10,22 +10,22 @@ const Cart = () => {
     const { cart, totalPrice } = useCartContext();
 
 
-    const order = {
-        buyer: {
-            name: 'Patz',
-            email: 'patz@gmail.com',
-            phone: '1544556677',
-            address: 'Avenida Siempreviva 740, CABA'
-        },
-        items: cart.map(product => ({ id: product.id, name: product.name, price: product.price, quantity: product.quantity })),
-        total: totalPrice(),
-    }
+    // const order = {
+    //     buyer: {
+    //         name: 'Patz',
+    //         email: 'patz@gmail.com',
+    //         phone: '1544556677',
+    //         address: 'Avenida Siempreviva 740, CABA'
+    //     },
+    //     items: cart.map(product => ({ id: product.id, name: product.name, price: product.price, quantity: product.quantity })),
+    //     total: totalPrice(),
+    // }
 
     const handleClick = () => {
-        const db = getFirestore();
-        const ordersCollection = collection(db, 'orders');
-        addDoc(ordersCollection, order)
-            .then(({ id }) => console.log(id))
+        // const db = getFirestore();
+        // const ordersCollection = collection(db, 'orders');
+        // addDoc(ordersCollection, order)
+        //     .then(({ id }) => console.log(id))
         swal.fire({
             title: '¡Usted a emitido una orden de Compra!'
         });
@@ -35,7 +35,7 @@ const Cart = () => {
         return (
             <>
                 <p>No hay elementos en el carrito.</p>
-                <Link to='/'>Hacer compras</Link>
+                <Link to='/' >Hacer compras</Link>
             </>
         );
     }
@@ -47,12 +47,12 @@ const Cart = () => {
                 cart.map(product => <ItemCart key={product.id} product={product} />)
             }
             
-        </div>
-        <div>
+            </div>
+            <div className="compra">
                 <p>
                     TOTAL: ${totalPrice()}
                 </p>
-                <button onClick={handleClick}>Emitir Compra</button>
+                <button onClick={handleClick} className="mt-2 mb-20 bg-blue-500 hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Emitir Compra</button>
             </div>
         </>
     )

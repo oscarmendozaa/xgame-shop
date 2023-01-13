@@ -22,7 +22,7 @@ const ItemCart = ({ product }) => {
   </div>
 </div> */}
 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`/imagenes/productos/${product.img}`} alt={product.name}/>
+      <Card.Img variant="top" src={`/imagenes/productos/${product.imageId}`} alt={product.name}/>
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>
